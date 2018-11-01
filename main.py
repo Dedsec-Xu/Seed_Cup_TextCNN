@@ -77,14 +77,43 @@ def val(epoch):
     f1_3 = f1_3.caculate_f1()
     f1 = 0.1*f1_1+0.3*f1_2+0.6*f1_3
     print("val epoch %d finished" % epoch)
-    print("Save model...")
-    torch.save(net, "model.t7")
-    print("Save model successfully!")
     print("final loss:%.10f" % loss)
     print("f1 for class1:", f1_1)
     print("f1 for class2:", f1_2)
     print("f1 for class3:", f1_3)
     print("final f1:", f1)
+    print("history best f1:", opt.ff)
+    if f1 > opt.ff
+        print("f1 is better than historybest:", opt.ff)
+        opt.ff = f1
+        print("Save model...")
+        torch.save(net, "bestfmodel.t7")
+        print("Model saved successfully!")
+    else:
+        print("f1 is worse than historybest:", opt.ff)
+        print("Model will not be saved...")
+
+        if f1_1 > opt.ff_1:
+            print("f1_1 is better than historybest:", opt.ff_1)
+            opt.ff_1 = f1_2
+            print("Save model...")
+            torch.save(net, "f1model.t7")
+            print("Model saved successfully!")
+
+        if f1_2 > opt.ff_2:
+            print("f1_2 is better than historybest:", opt.ff_2)
+            opt.ff_2 = f1_2
+            print("Save model...")
+            torch.save(net, "f2model.t7")
+            print("Model saved successfully!")
+
+        if f1_3 > opt.ff_3:
+            print("f1_3 is better than historybest:", opt.ff_3)
+            opt.ff_3 = f1_3
+            print("Save model...")
+            torch.save(net, "f3model.t7")
+            print("Model saved successfully!")
+
 
 
 for i in range(opt.NUM_EPOCHS):
