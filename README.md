@@ -18,6 +18,14 @@
 
 `test.py`:加载模型并生成提交文件
 
+`word_preprocess.py`:处理训练集并保存为npy，便于进行数据分析
+
+`word_plot.py`:将训练集中的词频可视化，便于进行预处理
+
+`word_delete.py`:删除指定文件中的指定词（由word_delete_high_freq.py生成的npy文件指定）
+
+`word_delete_high_freq.py`:计算训练集中频率超出阈值的词，保存到npy文件中
+
 ### 效果说明
 测试集输出取得了0.8604的分数
 
