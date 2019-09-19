@@ -5,9 +5,14 @@ https://github.com/Dedsec-Xu/Seed_Cup_TextCNN
 Code for Seed Cup Machine Learning competetion. We developed a CNN NLP model which can process Masked Data of a product description and decide the category of the product.  The final score is 86.04%. 
 
 ## Example
-![Image text](./image/CNN2.png)
-![Image text](./image/cnn.png)
 
+By analyzing this:
+
+![Image text](./image/CNN2.png)
+We get the category of the product
+
+
+![Image text](./image/cnn.png)
 ## Category
 `data/`: stores dataset
 
