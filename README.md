@@ -9,6 +9,8 @@ Code for Seed Cup Machine Learning competetion. We developed a CNN NLP model whi
 By analyzing this:
 
 ![Image text](./image/CNN2.png)
+
+
 We get the category of the product
 
 
